@@ -13,40 +13,55 @@
         
             <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
         
-            <link rel="stylesheet" href="static/index.css"/>
+            <link rel="stylesheet" href="static/css/index.css"/>
         
 
         <title>Victor Hernandez's Resume</title>
     </head>
     <body class="container fading">
 
+    <section class="controls no-print">
+        
+    <a class="btn-icon no-print" href="#" onclick="window.print()"><i class="fas fa-print"></i></a>
 
+        
+    <div class="zoom-controls" id="controls">
+        <a class="btn-icon" onclick="ZoomIn()"><i class="fas fa-search-plus"></i></a>
+        <a class="btn-icon" id="zoomLvl" onclick="Center()"></a>
+        <a class="btn-icon" onclick="ZoomOut()"><i class="fas fa-search-minus"></i></a>
+    </div>
+
+    </section>
 
     <section>
         
-    <div class="terminal-nav">
+    <div class="terminal-nav no-print">
         <header class="terminal-logo">
             <div class="logo terminal-prompt">Vaiktorg Resume</div>
         </header>
         <nav class="terminal-menu">
             <ul>
-                <li><a href="#resume" class="active">Home</a></li>
-                <li><a href="#social">Social</a></li>
-                <li><a href="#resources">Resources</a></li>
+                <li><a href="#profile" class="active">Profile</a></li>
+                <li><a href="#skills" >Skills</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#education">Education</a></li>
             </ul>
         </nav>
+
     </div>
 
-        <div class="stripes"></div>
+        <div class="stripes no-print"></div>
         
 
         <div id="resume">
+
+
     <div id="profile">
         
     <div class="terminal-card">
-        <header><h3 style="margin: 0">Victor Hernandez Candelaria</h3></header>
+        <header><h2 style="margin: 0">Victor Hernandez Candelaria</h2></header>
         <div class="flex-container">
-            <img src="https://avatars.githubusercontent.com/u/9144611" style="width: 256px;" alt="profile picture">
+            <img src="https://avatars.githubusercontent.com/u/9144611" id="profile_pic" style="width: 256px;" alt="profile picture">
             <section class="" style="min-width: 256px; flex: 1">
                 <header><p><u>Backend Dev | Game Dev 💻</u></p></header>
                 <p><p>27 years old nerd that loves making music and practicing martial arts as a hobby. Participated in robotics and automation in highschool, did home chemistry from high school to university until a tragic accident decided chemistry was not for me.</p>
@@ -55,51 +70,39 @@
                     
                         <li><a href="mailto:victor.hernandez.candelaria@live.com">victor.hernandez.candelaria@live.com</a></li>
                     
-                        <li>(939)249-2928</li>
+                        <li>(939) 249-2928</li>
                     
-                        <li>Carr. 639 Mendez, Sabana Hoyos, PR, 00688</li>
+                        <li>Arecibo, PR, 00688</li>
+                    
+                        <li>https://vaiktorg.dev/</li>
                 </ul>
-
-                <details><summary>Known Medical Conditions</summary>
-                    <ul>
-                        
-                        <li><a href="https://www.psychiatry.org/patients-families/adhd/what-is-adhd" target="_blank">ADHD (Attention Deficit Hyperactive Disorder)</a></li>
-                    
-                        <li><a href="https://www.psychiatry.org/patients-families/autism/what-is-autism-spectrum-disorder" target="_blank">ASD (Autistic Spectrum Disorder)</a></li>
-                    
-                        <li><a href="https://www.diabetes.org/healthy-living/medication-treatments/blood-glucose-testing-and-control/hypoglycemia" target="_blank">Hypoglycemia</a></li>
-                    
-                    </ul>
-                </details>
             </section>
-
         </div>
     </div>
 
 
     </div>
-
     <div id="skills">
-        <header><h4>Skills</h4></header>
+        <header><h3>Skills</h3></header>
         <div class="terminal-card">
             <header>Abilities</header>
 
             <section>
                 <ul>
                     
-                        <li>Responsibility and punctuality.</li>
+                        <li>Responsibility and punctuality</li>
                     
-                        <li>Work under dead lines.</li>
+                        <li>Work under dead lines</li>
                     
-                        <li>Able to work with new technologies.</li>
+                        <li>Able to work with new technologies</li>
                     
-                        <li>Capable of fast adaptation and quick learning.</li>
+                        <li>Capable of fast adaptation and quick learning</li>
                     
-                        <li>Bilingual: English, Spanish</li>
+                        <li>Bilingual: English / Spanish</li>
                     
                         <li>Highly creative and improvisational</li>
                     
-                        <li>Library and framework development.</li>
+                        <li>Library and framework development</li>
                     
                 </ul>
             </section>
@@ -118,6 +121,8 @@
                         <li>HTML, CSS, JQuery</li>
                     
                         <li>Javascript/Typescript</li>
+                    
+                        <li>Sharepoint, Joomla</li>
                     
                         <li>GDAL, gin-gonic, delve,</li>
                     
@@ -147,14 +152,14 @@
     </div>
 
     <div id="experiences">
-        <header><h4>Experience</h4></header>
+        <header><h3>Experience</h3></header>
         <div class="terminal-timeline">
             
                 <div class="terminal-card">
-                    <header class="terminal-card-header">
-                        <h5 style="margin: 0">Ingellicom</h5>
-                        <div>San Juan, Puerto Rico</div>
-                        <div>2020-Present</div>
+                    <header>
+                        <h4 style="margin: 0">Ingellicom</h4>
+                        <div class="smaller">San Juan, Puerto Rico</div>
+                        <div class="smaller">2020-Present</div>
                     </header>
 
 
@@ -167,10 +172,10 @@
                 </div>
             
                 <div class="terminal-card">
-                    <header class="terminal-card-header">
-                        <h5 style="margin: 0">SRT Group</h5>
-                        <div>Davie, FL / Sunrise, FL</div>
-                        <div>2019-2020</div>
+                    <header>
+                        <h4 style="margin: 0">SRT Group</h4>
+                        <div class="smaller">Davie, FL / Sunrise, FL</div>
+                        <div class="smaller">2019-2020</div>
                     </header>
 
 
@@ -187,10 +192,10 @@
                 </div>
             
                 <div class="terminal-card">
-                    <header class="terminal-card-header">
-                        <h5 style="margin: 0">Revature</h5>
-                        <div>Tampa, FL / Davie, FL</div>
-                        <div>2018-2019</div>
+                    <header>
+                        <h4 style="margin: 0">Revature</h4>
+                        <div class="smaller">Tampa, FL / Davie, FL</div>
+                        <div class="smaller">2018-2019</div>
                     </header>
 
 
@@ -208,14 +213,14 @@
     </div>
 
     <div id="education">
-        <header><h4>Education</h4></header>
+        <header><h3>Education</h3></header>
         <div class="terminal-timeline">
             
                 <div class="terminal-card">
                     <header>
-                        <h5 style="margin: 0">Revature</h5>
-                        <div>Tampa, FL, USA</div>
-                        <div>2018 - 2019</div>
+                        <h4 style="margin: 0">Revature</h4>
+                        <div class="smaller">Tampa, FL, USA</div>
+                        <div class="smaller">2018 - 2019</div>
                     </header>
 
                     <section>Three months training in industry standard web technologies and employment placement.</section>
@@ -223,9 +228,9 @@
             
                 <div class="terminal-card">
                     <header>
-                        <h5 style="margin: 0">Atlantic University College</h5>
-                        <div>Guaynabo, PR</div>
-                        <div>2012 - 2017</div>
+                        <h4 style="margin: 0">Atlantic University College</h4>
+                        <div class="smaller">Guaynabo, PR</div>
+                        <div class="smaller">2012 - 2017</div>
                     </header>
 
                     <section>Bachelor Degree in Science of Art and Design of Video Games with major in Programming.</section>
@@ -233,9 +238,9 @@
             
                 <div class="terminal-card">
                     <header>
-                        <h5 style="margin: 0">Antonio Luchetti Vocational</h5>
-                        <div>Arecibo, PR</div>
-                        <div>2009 - 2012</div>
+                        <h4 style="margin: 0">Antonio Luchetti Vocational</h4>
+                        <div class="smaller">Arecibo, PR</div>
+                        <div class="smaller">2009 - 2012</div>
                     </header>
 
                     <section>Industrial Electronics and Automation certification.</section>
@@ -245,18 +250,18 @@
     </div>
 
 </div>
-        <div id="social">
-    <header><h4>Social</h4></header>
+        <div class="no-print" id="social">
+    <header><h3>Social</h3></header>
     <section class="flex-container">
         
-            <a class="btn-icon btn" href="https://github.com/vaiktorg"><i class="fab fa-github"></i>github</a>
+            <a class="btn-ghost btn" href="https://github.com/vaiktorg"><i class="fab fa-github"></i>#github</a>
         
-            <a class="btn-icon btn" href="https://www.linkedin.com/in/victorhernandezcandelaria/"><i class="fab fa-linkedin"></i>linkedin</a>
+            <a class="btn-ghost btn" href="https://www.linkedin.com/in/victorhernandezcandelaria/"><i class="fab fa-linkedin"></i>#linkedin</a>
         
     </section>
 </div>
-        <div id="resources">
-    <header><h4>Resources</h4></header>
+        <div class="no-print" id="resources">
+    <header><h3>Resources</h3></header>
     <section>
         <details open><summary>Dependencies</summary>
             <div class="flex-container">
@@ -297,10 +302,13 @@
     </section>
 </div>
     </section>
-
     </body>
 
     
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <script src="static/js/index.js"></script>
     
 
     </html>
