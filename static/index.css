@@ -1,0 +1,165 @@
+:root {
+    --global-font-size: 12px;
+    --global-line-height: 1.4em;
+    --global-space: 10px;
+    --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    --background-color: #000000;
+    --page-width: 60em;
+    --font-color: #fff;
+    --secondary-font-color: #888;
+    --invert-font-color: #333;
+    --primary-color: #0098fd;
+    --secondary-color: #111;
+    --error-color: #d20962;
+    --progress-bar-background: #727578;
+    --progress-bar-fill: #333;
+    --code-bg-color: #e8eff2;
+    --input-style: solid;
+    --display-h1-decoration: true;
+}
+
+#profile, #skills, #experiences, #education, #profile, #resources, #social, #contact {
+    margin-bottom: 64px;
+}
+
+div {
+    padding: 0;
+}
+
+details {
+    padding: var(--global-space);
+    border: dashed 1px var(--secondary-color);
+}
+summary:hover {
+    text-decoration: underline dashed 1px;
+}
+summary {
+    margin: 4px;
+}
+
+section {
+    color: var(--font-color);
+    padding: var(--global-space);
+}
+
+section > p {
+    margin: 0
+}
+
+h4::after {
+    content: "====================================================================================================";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    display: var(--display-h1-decoration);
+}
+
+h4 {
+    position: relative;
+    display: inline-block;
+    padding: calc(var(--global-space) * 2) 0 calc(var(--global-space) * 2);
+    margin: 0;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.container, .container-fluid {
+    padding: 0;
+}
+
+.terminal-card > header {
+    color: var(--font-color);
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: .5em 0;
+}
+
+/*=========================================================*/
+
+/* Styles go here */
+.stripes {
+    width: 100%;
+    height: 2px;
+    padding: 0;
+    max-height: 2px;
+
+    background-image: repeating-linear-gradient(-45deg, rgb(0, 0, 0), rgb(0, 0, 0) 8px, var(--primary-color) 8px, var(--primary-color) 16px);
+    animation: progress 2s linear infinite;
+    background-size: 45.25px 100%;
+}
+
+@keyframes progress {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: calc(45.25px / 2) 0;
+    }
+}
+
+
+.terminal-menu {
+    width: 100%;
+
+}
+
+.terminal-menu li a:not(.btn) {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border: none;
+    color: var(--secondary-font-color);
+}
+
+.terminal-menu li a.active {
+    color: var(--font-color);
+}
+
+.terminal-menu li a:hover {
+    background: none;
+    color: var(--font-color);
+}
+
+.terminal-card > div:first-of-type {
+    padding: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--global-space);
+    gap: var(--global-space);
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.btn-icon {
+    font-size: 32px;
+    padding: 16px;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+.btn-pill {
+    font-size: smaller;
+    padding: 2px 4px;
+    border-radius: 16px;
+    border-style: dashed;
+}
+
+
+.fading {
+    animation: fading 1.5s ease
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+
