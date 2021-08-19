@@ -150,6 +150,11 @@ h3 {
     align-items: flex-start;
     justify-content: space-evenly;
 }
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    gap: var(--global-space);
+}
 .btn > i{
     margin-right: var(--global-space);
     font-size: calc(2 * var(--global-font-size));
@@ -199,7 +204,6 @@ h3 {
 .smaller {
     font-size: smaller;
 }
-
 /*Print Media*/
 /*=======================================================*/
 @media print {
@@ -228,6 +232,7 @@ h3 {
     }
     p,h1,h2,h3,h4,h5,header {
         color:black!important;
+        margin: 0;
     }
     #experiences,#education {
         page-break-before: always;
@@ -237,6 +242,7 @@ h3 {
         padding: 0!important;
         content: none!important;
     }
+
 }
 
 @media screen and (max-width:768px){
@@ -255,4 +261,13 @@ h3 {
         content: none!important;
     }
 
+}
+@media screen and (max-width:425px){
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--global-space);
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
 }
