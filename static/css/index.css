@@ -4,11 +4,22 @@
     --global-space: 10px;
     --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    --page-width: 70em;
+    --background-color: #000000;
+    --page-width: 60em;
+    --font-color: #fff;
+    --secondary-font-color: #888;
+    --invert-font-color: #333;
+    --primary-color: #0098fd;
+    --secondary-color: #111;
+    --error-color: #d20962;
+    --progress-bar-background: #727578;
+    --progress-bar-fill: #333;
+    --code-bg-color: #e8eff2;
     --input-style: solid;
     --display-h1-decoration: true;
 }
 
+/* Animations*/
 /*=======================================================*/
 @keyframes fading {
     0% {
@@ -22,28 +33,24 @@
     animation: fading 1.5s ease
 }
 
-@keyframes pulse {
+@keyframes progress {
     0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 var(--primary-color);
+        background-position: 0 0;
     }
-
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    }
-
     100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        background-position: calc(45.25px / 2) 0;
     }
 }
-
-.pulse {
-    transform: scale(1);
-    box-shadow: var(--primary-color) 0 0 20;
-    animation: pulse 2s infinite;
+.stripes {
+    width: 100%;
+    height: 3px;
+    max-height: 6px;
+    background-image: repeating-linear-gradient(-45deg, rgb(0, 0, 0), rgb(0, 0, 0) 8px, var(--primary-color) 8px, var(--primary-color) 16px);
+    animation: progress 2s linear infinite;
+    background-size: 45.25px 100%;
+    box-shadow: 0 0 20px 0 var(--primary-color);
 }
+
 /*Desktop Media*/
 /*=======================================================*/
 /*Tags*/
@@ -76,12 +83,18 @@ section > p {
     margin: 0
 }
 
-h1,h2,h3,h4,h5 {
+h1,h2,h3,h4,h5{
     padding: 0;
     margin: 0;
-    width: 100%;
 }
 
+h3::after {
+    content: "====================================================================================================";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    display: var(--display-h1-decoration);
+}
 
 h3 {
     position: relative;
@@ -91,15 +104,11 @@ h3 {
     font-weight: 600;
 }
 
-footer {
-    margin-top: 64px;
-    background: var(--secondary-color);
-    text-align: center;
-}
-
 /*Classes*/
 /*=======================================================*/
-
+.container, .container-fluid {
+    padding: 0;
+}
 
 .terminal-card > header {
     color: var(--font-color);
@@ -135,13 +144,11 @@ footer {
 
 .flex-container {
     display: flex;
-    gap: var(--global-space);
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    gap: var(--global-space);
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
-
 .skills-container {
     display: flex;
     flex-direction: row;
@@ -181,7 +188,7 @@ footer {
     gap: var(--global-space);
 }
 
-.icons-container {
+.zoom-controls{
     border-style: dashed;
     border-width: 1px;
     border-color: var(--secondary-color);
@@ -189,33 +196,12 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--global-font-size);
-    padding: calc(var(--global-space) / 2);
+    gap: var(--global-font-size)
 }
 
-
-@keyframes shake {
-    10%, 90% {
-        transform: translate3d(-1px, 0, 0);
-    }
-
-    20%, 80% {
-        transform: translate3d(2px, 0, 0);
-    }
-
-    30%, 50%, 70% {
-        transform: translate3d(-4px, 0, 0);
-    }
-
-    40%, 60% {
-        transform: translate3d(4px, 0, 0);
-    }
-}
-
-.xx-small {
+.xx-small{
     font-size: xx-small;
 }
-
 .smaller {
     font-size: smaller;
 }
@@ -244,89 +230,45 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 
-/*IDs*/
-#skills, #experiences, #education, #social, #profile {
-    margin-top: 64px;
-    margin-bottom: 64px;
-}
-
-#profile_pic {
-    width: 50%;
-}
-
-@page {
-    size: auto;   /* auto is the initial value */
-    /* this affects the margin in the printer settings */
-    margin: 10mm 10mm 10mm 10mm;
-}
-
 /*Print Media*/
 /*=======================================================*/
 @media print {
-    html {
-        page-break-after: avoid;
-        page-break-before: avoid;
+    .no-print {
+        display: none!important;
+    }
+    div {
+        border: none!important;
+        color: black!important;
+        text-align: justify!important;
+    }
+    section {
+        color: black!important;
+        border: none!important;
     }
 
-    h2::before {
-        content: "> ";
+    .terminal-timeline{
+        padding-left: 0!important;
     }
-
-    h2::after {
-        content: " _";
+    .terminal-timeline .terminal-card::before{
+        color: black!important;
+        content: none!important;
     }
-
-    p, h1, h2, h3, h4, h5, header {
-        color: black !important;
+    .terminal-card>header{
+        text-align: left!important;
+    }
+    p,h1,h2,h3,h4,h5,header {
+        color:black!important;
         margin: 0;
     }
-
-    div {
-        border: none !important;
-        color: black !important;
-        text-align: justify !important;
-    }
-
-    section {
-        color: black !important;
-        border: none !important;
-    }
-
-    .no-print {
-        display: none !important;
-    }
-
-    .terminal-timeline {
-        padding-left: 0 !important;
-    }
-
-    .terminal-timeline .terminal-card::before {
-        color: black !important;
-        content: none !important;
-    }
-
-    .terminal-card > header {
-        text-align: left !important;
-    }
-
-    .terminal-timeline::before {
-        border: none !important;
-        padding: 0 !important;
-        content: none !important;
-    }
-
-
-    #experiences, #education {
-        margin-bottom: 0;
+    #experiences,#education {
         page-break-before: always;
     }
-
-    #profile_pic {
-        border-image: none;
-        border-radius: 0;
-        margin: 0;
-        width: 256px;
+    .terminal-timeline::before{
+        border: none!important;
+        padding: 0!important;
+        content: none!important;
     }
+
 }
 
 @media screen and (max-width:768px){
@@ -346,8 +288,7 @@ html::-webkit-scrollbar-thumb:hover {
     }
 
 }
-
-@media screen and (max-width: 425px) {
+@media screen and (max-width:425px){
     .skills-container {
         display: flex;
         flex-wrap: wrap;
@@ -356,6 +297,3 @@ html::-webkit-scrollbar-thumb:hover {
         justify-content: space-evenly;
     }
 }
-
-/*Themes*/
-/*======================================================================*/

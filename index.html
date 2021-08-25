@@ -18,65 +18,55 @@
 
         <title>Victor Hernandez's Resume</title>
     </head>
-    <body class="fading">
+    <body class="container fading">
 
     <section class="controls no-print">
+        
+    <a class="btn-icon no-print" href="#" onclick="window.print()"><i class="fas fa-print"></i></a>
 
-        <a class="btn-icon no-print" href="#" onclick="window.print()"><i class="fas fa-print"></i></a>
-
-
-        <div class="icons-container" id="controls">
-            <a class="btn-icon" onclick="ZoomIn()"><i class="fas fa-search-plus"></i></a>
-            <a class="btn-icon" id="zoomLvl" onclick="Center()"></a>
-            <a class="btn-icon" onclick="ZoomOut()"><i class="fas fa-search-minus"></i></a>
-        </div>
-
-
-        <div class="icons-container pulse" id="themes">
-
-            <a class="btn-icon" href="/?theme=neon.css"><i class="fas fa-robot"></i></a>
-
-            <a class="btn-icon" href="/?theme=blood.css"><i class="fas fa-tint"></i></a>
-
-        </div>
+        
+    <div class="zoom-controls" id="controls">
+        <a class="btn-icon" onclick="ZoomIn()"><i class="fas fa-search-plus"></i></a>
+        <a class="btn-icon" id="zoomLvl" onclick="Center()"></a>
+        <a class="btn-icon" onclick="ZoomOut()"><i class="fas fa-search-minus"></i></a>
+    </div>
 
     </section>
 
-    <div class="body container">
+    <div class="body" style="margin: 0 var(--global-space)">
+        
+    <div class="terminal-nav no-print">
+        <header class="terminal-logo">
+            <div class="logo terminal-prompt">Vaiktorg Resume</div>
+        </header>
+        <nav class="terminal-menu">
+            <ul>
+                <li><a href="#profile" class="active">Profile</a></li>
+                <li><a href="#skills" >Skills</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
 
-        <div class="terminal-nav no-print">
-            <header class="terminal-logo">
-                <div class="logo terminal-prompt">Vaiktorg Resume</div>
-            </header>
-            <nav class="terminal-menu">
+    </div>
+
+        <div class="stripes no-print"></div>
+        
+
+        <div id="resume">
+    <div id="profile">
+        
+    <div class="terminal-card">
+        <header><h2 style="margin: 0">Victor Hernandez Candelaria</h2></header>
+        <div class="flex-container">
+            <img src="https://avatars.githubusercontent.com/u/9144611" id="profile_pic" style="width: 256px;" alt="profile picture">
+            <section class="" style="min-width: 256px; flex: 1">
+                <header><p><u>Backend Dev | Game Dev 💻</u></p></header>
+                <p><p>27 years old nerd that loves making music and practicing martial arts as a hobby. Participated in robotics and automation in highschool, did home chemistry from high school to university until a tragic accident decided chemistry was not for me.</p>
+</p>
                 <ul>
-                    <li><a href="#profile" class="active">Profile</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experiences">Experiences</a></li>
-                    <li><a href="#education">Education</a></li>
-                </ul>
-            </nav>
-        </div>
-
-
-        <div id="resume flex-container">
-            <div id="profile">
-
-                <div class="stripes no-print"></div>
-                <div class="terminal-card">
-                    <header><h2>Victor Hernandez Candelaria</h2></header>
-                    <div class="flex-container">
-                        <img src="image?res=256,256" id="profile_pic" alt="profile picture">
-                        <section class="" style="min-width: 256px; flex: 1">
-                            <header><p><u>Backend Dev | Game Dev 💻</u></p></header>
-                            <p>
-                            <p>27 years old nerd that loves making music and practicing martial arts as a hobby.
-                                Participated in robotics and automation in highschool, did home chemistry from high
-                                school to university until a tragic accident decided chemistry was not for me.</p>
-                            </p>
-                            <ul>
-
-                                <li><a href="mailto:victor.hernandez.candelaria@live.com">victor.hernandez.candelaria@live.com</a></li>
+                    
+                        <li><a href="mailto:victor.hernandez.candelaria@live.com">victor.hernandez.candelaria@live.com</a></li>
                     
                         <li>(939) 249-2928</li>
                     
@@ -93,17 +83,17 @@
 
     <div id="skills" >
         <header><h3>Skills</h3></header>
-        <section class="skills-container">
-            <div class="terminal-card">
+        <div class="skills-container">
+            <div class="terminal-card" >
                 <header>Abilities</header>
-                <section>
+                <section >
                     <ul>
-
-                        <li>Responsibility and punctuality</li>
-
-                        <li>Work under dead lines</li>
-
-                        <li>Able to work with new technologies</li>
+                        
+                            <li>Responsibility and punctuality</li>
+                        
+                            <li>Work under dead lines</li>
+                        
+                            <li>Able to work with new technologies</li>
                         
                             <li>Capable of fast adaptation and quick learning</li>
                         
@@ -146,33 +136,32 @@
                             <li>SSH, SCP, FTP, HTTP/S (TLS)</li>
                         
                             <li>Microsoft Office</li>
-
-                        <li>Adobe Suite</li>
-
-                        <li>3DS Max, Blender</li>
-
-                        <li>Unreal Engine 4, Godot Engine</li>
-
+                        
+                            <li>Adobe Suite</li>
+                        
+                            <li>3DS Max, Blender</li>
+                        
+                            <li>Unreal Engine 4, Godot Engine</li>
+                        
                     </ul>
                 </section>
             </div>
-        </section>
+        </div>
     </div>
 
     <div id="experiences">
         <header><h3>Experience</h3></header>
-        <section class="terminal-timeline">
+        <div class="terminal-timeline">
+            
+                <div class="terminal-card">
+                    <header>
+                        <h4 style="margin: 0">Ingellicom</h4>
+                        <div class="smaller">San Juan, Puerto Rico</div>
+                        <div class="smaller">2020-Present</div>
+                    </header>
 
-            <div class="terminal-card">
-                <header>
-                    <h4 style="margin: 0">Ingellicom</h4>
-                    <div class="smaller">San Juan, Puerto Rico</div>
-                    <div class="smaller">2020-Present</div>
-                </header>
 
-
-                <section>
-                    <ul>
+                    <section><ul>
 <li><p><strong>IT Jr. Developer:</strong> Researched, analyzed and developed turn-key solutions for clients with specific needs, utilizing Microsoft technologies like .NET Core, ASPNet Core and Entity Framework Core (EFCore), Microsoft SQL Server Management Studio, IIS Manager, CA Workload, etc.</p></li>
 
 <li><p>Implementation of intranet solution like Microsoft Sharepoint and Web Solutions like Joomla.</p></li>
@@ -208,38 +197,32 @@
                     </header>
 
 
-                    <section>
-                        <ul>
-                            <li><p><strong>Full-Stack Developer:</strong> Researched, designed and developed on a social
-                                media application in a team of 3.</p></li>
+                    <section><ul>
+<li><p><strong>Full-Stack Developer:</strong> Researched, designed and developed on a social media application in a team of 3.</p></li>
 
-                            <li><p><strong>DevOps &amp; QA:</strong> Wrote unit tests for backend service with the use
-                                of JUnit, setup continuous integration for projects with use of Jenkins and managed
-                                hosting and deployment with docker.</p></li>
+<li><p><strong>DevOps &amp; QA:</strong> Wrote unit tests for backend service with the use of JUnit, setup continuous integration for projects with use of Jenkins and managed hosting and deployment with docker.</p></li>
 
-                            <li><p><strong>Project Placement:</strong> Placed in SRT as a contractor where I worked as a
-                                Golang backend developer, DevOps with Teamcity/TFS, various technologies, environments,
-                                platforms and techniques.</p></li>
-                        </ul>
-                    </section>
+<li><p><strong>Project Placement:</strong> Placed in SRT as a contractor where I worked as a Golang backend developer, DevOps with Teamcity/TFS, various technologies, environments, platforms and techniques.</p></li>
+</ul>
+</section>
                 </div>
-
-        </section>
+            
+        </div>
     </div>
 
     <div id="education">
         <header><h3>Education</h3></header>
-        <section class="terminal-timeline">
+        <div class="terminal-timeline">
+            
+                <div class="terminal-card">
+                    <header>
+                        <h4 style="margin: 0">Revature</h4>
+                        <div class="smaller">Tampa, FL, USA</div>
+                        <div class="smaller">2018 - 2019</div>
+                    </header>
 
-            <div class="terminal-card">
-                <header>
-                    <h4 style="margin: 0">Revature</h4>
-                    <div class="smaller">Tampa, FL, USA</div>
-                    <div class="smaller">2018 - 2019</div>
-                </header>
-
-                <section>Three months training in industry standard web technologies and employment placement.</section>
-            </div>
+                    <section>Three months training in industry standard web technologies and employment placement.</section>
+                </div>
             
                 <div class="terminal-card">
                     <header>
@@ -250,18 +233,18 @@
 
                     <section>Bachelor Degree in Science of Art and Design of Video Games with major in Programming.</section>
                 </div>
+            
+                <div class="terminal-card">
+                    <header>
+                        <h4 style="margin: 0">Antonio Luchetti Vocational</h4>
+                        <div class="smaller">Arecibo, PR</div>
+                        <div class="smaller">2009 - 2012</div>
+                    </header>
 
-            <div class="terminal-card">
-                <header>
-                    <h4 style="margin: 0">Antonio Luchetti Vocational</h4>
-                    <div class="smaller">Arecibo, PR</div>
-                    <div class="smaller">2009 - 2012</div>
-                </header>
-
-                <section>Industrial Electronics and Automation certification.</section>
-            </div>
-
-        </section>
+                    <section>Industrial Electronics and Automation certification.</section>
+                </div>
+            
+        </div>
     </div>
 
 </div>
@@ -309,26 +292,21 @@
                     <a class="" href="https://github.com/bjornbytes/lovr">#Lovr</a>
                 
                     <a class="" href="https://svelte.dev/">#Svelte</a>
-
-                <a class="" href="https://github.com/hoanhan101/ultimate-go">#UltimateGoStudyGuide</a>
-
+                
+                    <a class="" href="https://github.com/hoanhan101/ultimate-go">#UltimateGoStudyGuide</a>
+                
             </section>
         </details>
     </section>
-        </div>
+</div>
     </div>
-
     </body>
 
-
-    <footer>
-        <section>Made with 💙 by Vaiktorg</section>
-    </footer>
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script src="static/js/index.js"></script>
-
+    
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <script src="static/js/index.js"></script>
+    
 
     </html>
