@@ -1,0 +1,74 @@
+{{define "main"}}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        {{/*Stylesheets*/}}
+        {{range $_, $v := .Libs.Stylesheets}}
+            <link rel="stylesheet" href="{{$v}}">
+        {{end}}
+
+        {{/*Theme selection*/}}
+        {{if .ThemeQ}}
+            <link rel="stylesheet" href="static/css/{{.ThemeQ}}"/>
+        {{end}}
+
+        <title>Victor Hernandez's Resume</title>
+    </head>
+    <body class="fading">
+
+    <section class="controls no-print">
+        {{template "print"}}
+        {{template "zoom"}}
+        {{template "themes-select" .Libs.Themes}}
+    </section>
+
+    <div class="body container">
+        {{template "nav"}}
+
+        {{if .Notif }}
+            <div class="terminal-alert terminal-alert-success">
+                {{.Notif}}
+            </div>
+        {{end}}
+
+        <div id="resume flex-container">{{template "resume" .Content.Resume}}</div>
+        <div class="no-print" id="social">{{template "social" .Content.Social}}</div>
+        <div class="no-print" id="resources">{{template "resources" .Content.Resources}}</div>
+    </div>
+
+    </body>
+
+
+    <footer>
+        <section>Made with 🖤 by Vaiktorg</section>
+    </footer>
+
+    {{/*Scripts*/}}
+    {{range $_,$src:=.Libs.Scripts}}
+        <script src="{{$src}}"></script>
+    {{end}}
+
+    </html>
+{{end}}
+
+{{/*/==========================================================================/*/}}
+{{define "nav"}}
+    <div class="terminal-nav no-print">
+        <header class="terminal-logo">
+            <div class="logo terminal-prompt">Vaiktorg Resume</div>
+        </header>
+        <nav class="terminal-menu">
+            <ul>
+                <li><a href="#profile" class="active">Profile</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </div>
+{{end}}

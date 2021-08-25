@@ -1,0 +1,130 @@
+{
+  "Libs": {
+    "Stylesheets": [
+      "https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css",
+      "https://pro.fontawesome.com/releases/v5.10.0/css/all.css",
+      "static/css/index.css"
+    ],
+    "Themes": {
+      "Directory": "static/css",
+      "CSS": {
+        "<i class=\"fas fa-tint\"></i>": "blood.css",
+        "<i class=\"fas fa-robot\"></i>": "neon.css"
+      }
+    },
+    "Scripts": [
+      "https://code.jquery.com/jquery-3.6.0.min.js",
+      "static/js/index.js"
+    ]
+  },
+  "Content": {
+    "Resume": {
+      "Profile": {
+        "Name": "Victor Hernandez Candelaria",
+        "Email": "vaiktorg1@gmail.com",
+        "Title": "Backend Dev | Game Dev \uD83D\uDCBB",
+        "Description": "27 years old nerd that loves making music and practicing martial arts as a hobby. Participated in robotics and automation in highschool, did home chemistry from high school to university until a tragic accident decided chemistry was not for me.",
+        "ThumbnailPath": "https://avatars.githubusercontent.com/u/9144611",
+        "ThumbnailPath": "image?res=256,256",
+        "Contact": {
+          "Address": "Arecibo, PR, 00688",
+          "Email": "victor.hernandez.candelaria@live.com",
+          "PhoneNumber": "(939) 249-2928",
+          "Web": "https://vaiktorg.dev/"
+        }
+      },
+      "Education": [
+        {
+          "Name": "Revature",
+          "Date": "2018 - 2019",
+          "Location": "Tampa, FL, USA",
+          "Info": "Three months training in industry standard web technologies and employment placement."
+        },
+        {
+          "Name": "Atlantic University College",
+          "Date": "2012 - 2017",
+          "Location": "Guaynabo, PR",
+          "Info": "Bachelor Degree in Science of Art and Design of Video Games with major in Programming."
+        },
+        {
+          "Name": "Antonio Luchetti Vocational",
+          "Date": "2009 - 2012",
+          "Location": "Arecibo, PR",
+          "Info": "Industrial Electronics and Automation certification."
+        }
+      ],
+      "Experience": [
+        {
+          "Name": "Ingellicom",
+          "Date": "2020-Present",
+          "Location": "San Juan, Puerto Rico",
+          "Info": "- **IT Jr. Developer:** Researched, analyzed and developed turn-key solutions for clients with specific needs, utilizing Microsoft technologies like .NET Core, ASPNet Core and Entity Framework Core (EFCore), Microsoft SQL Server Management Studio, IIS Manager, CA Workload, etc. \n\n- Implementation of intranet solution like Microsoft Sharepoint and Web Solutions like Joomla."
+        },
+        {
+          "Name": "SRT Group",
+          "Date": "2019-2020",
+          "Location": "Davie, FL / Sunrise, FL",
+          "Info": "- **Golang Back-end Developer:** Worked as developer for back-end service hub for communication between hardware and front-end. Took ownership of mapping service and had to research, design and develop an image processing tool that generates raster data for the service. An antenna gimbal unit and service were also part of my responsibilities as a feature I also owned (hardware and software) and had to maintain and refactor when specifications were updated.\n\n- **Continuous Integration:** Managed and scheduled the project’s builds with use of Git, TFS and/or Teamcity.\n\n- **Testing & QA:** Wrote unit tests using Gomega. Designed and developed a project specific testing framework for end-to-end and on-the-fly case testing for production builds. Framework was developed centered around Go's testing package.\n\n- **Experimental Android VR:** Researched and developed a proof-of-concept port of the project to android VR headset."
+        },
+        {
+          "Name": "Revature",
+          "Date": "2018-2019",
+          "Location": "Tampa, FL / Davie, FL",
+          "Info": "- **Full-Stack Developer:** Researched, designed and developed on a social media application in a team of 3.\n\n- **DevOps & QA:** Wrote unit tests for backend service with the use of JUnit, setup continuous integration for projects with use of Jenkins and managed hosting and deployment with docker.\n\n- **Project Placement:** Placed in SRT as a contractor where I worked as a Golang backend developer, DevOps with Teamcity/TFS, various technologies, environments, platforms and techniques."
+        }
+      ],
+      "Skills": {
+        "Abilities": [
+          "Responsibility and punctuality",
+          "Work under dead lines",
+          "Able to work with new technologies",
+          "Capable of fast adaptation and quick learning",
+          "Bilingual: English / Spanish",
+          "Highly creative and improvisational",
+          "Library and framework development"
+        ],
+        "Tools": [
+          "Golang, C#, C++, Python,",
+          "ASPNetCore, NET Core, EFCore",
+          "HTML, CSS, JQuery",
+          "Javascript/Typescript",
+          "Sharepoint, Joomla",
+          "GDAL, gin-gonic, delve,",
+          "gorilla/mux, lorca",
+          "JetBrains, Visual Studio, VSCode",
+          "Server Manager, IIS",
+          "SQL Server Management Studio",
+          "Linux (CentOS, Debian), Bash/Shell",
+          "SSH, SCP, FTP, HTTP/S (TLS)",
+          "Microsoft Office",
+          "Adobe Suite",
+          "3DS Max, Blender",
+          "Unreal Engine 4, Godot Engine"
+        ]
+      }
+    },
+    "Social": {
+      "github": "https://github.com/vaiktorg",
+      "linkedin": "https://www.linkedin.com/in/victorhernandezcandelaria/"
+    },
+    "Resources": {
+      "Dependencies": {
+        "Golang": "https://golang.org/",
+        "Gin-Gonic": "https://github.com/gin-gonic/gin",
+        "GoGraphics": "https://github.com/fogleman/gg",
+        "BlackFriday Markdown": "https://github.com/russross/blackfriday",
+        "GoFreetype": "https://github.com/golang/freetype"
+      },
+      "InterTech": {
+        "Svelte": "https://svelte.dev/",
+        "GoApp": "https://github.com/maxence-charriere/go-app",
+        "UltimateGoStudyGuide": "https://github.com/hoanhan101/ultimate-go",
+        "EffectiveGo": "https://github.com/golovers/effective-go",
+        "HackingWithGo": "https://github.com/parsiya/Hacking-with-Go",
+        "BetterCap": "https://github.com/bettercap/bettercap",
+        "Hey": "https://github.com/rakyll/hey",
+        "Lovr": "https://github.com/bjornbytes/lovr"
+      }
+    }
+  }
+}
