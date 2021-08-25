@@ -43,12 +43,13 @@
 }
 .stripes {
     width: 100%;
-    height: 3px;
-    max-height: 6px;
+    height: 2px;
+    padding: 0;
+    max-height: 2px;
+
     background-image: repeating-linear-gradient(-45deg, rgb(0, 0, 0), rgb(0, 0, 0) 8px, var(--primary-color) 8px, var(--primary-color) 16px);
     animation: progress 2s linear infinite;
     background-size: 45.25px 100%;
-    box-shadow: 0 0 20px 0 var(--primary-color);
 }
 
 /*Desktop Media*/
@@ -149,12 +150,10 @@ h3 {
     align-items: flex-start;
     justify-content: space-evenly;
 }
-.skills-container {
+.skills-container{
     display: flex;
     flex-direction: row;
     gap: var(--global-space);
-    align-content: stretch;
-    justify-content: space-between;
 }
 .btn > i{
     margin-right: var(--global-space);
@@ -205,31 +204,6 @@ h3 {
 .smaller {
     font-size: smaller;
 }
-
-/*Scroll wheel*/
-/*==========================================*/
-/* width */
-html::-webkit-scrollbar {
-    width: var(--global-space);
-}
-
-/* Track */
-html::-webkit-scrollbar-track {
-    background: var(--secondary-color);
-    width: var(--global-font-size);
-}
-
-/* Handle */
-html::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-}
-
-/* Handle on hover */
-html::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-font-color);
-}
-
-
 /*Print Media*/
 /*=======================================================*/
 @media print {
