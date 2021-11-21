@@ -207,6 +207,9 @@ h3 {
 /*Print Media*/
 /*=======================================================*/
 @media print {
+    body{
+        background-color: white;
+    }
     .no-print {
         display: none!important;
     }
@@ -229,6 +232,7 @@ h3 {
     }
     .terminal-card>header{
         text-align: left!important;
+        background-color: transparent;
     }
     p,h1,h2,h3,h4,h5,header {
         color:black!important;
